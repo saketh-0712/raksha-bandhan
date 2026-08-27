@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Raksha Bandhan ❤️</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -29,6 +31,7 @@
                 linear-gradient(135deg, #ff758c, #8e44ad);
         }
 
+
         /* =========================
            FLOATING HEARTS
         ========================== */
@@ -39,10 +42,12 @@
             font-size: 22px;
             pointer-events: none;
             z-index: 1;
+
             animation: floatHeart linear infinite;
         }
 
         @keyframes floatHeart {
+
             0% {
                 transform: translateY(0) rotate(0deg);
                 opacity: 0;
@@ -58,27 +63,40 @@
             }
         }
 
+
         /* =========================
-           MAIN
+           MAIN CONTAINER
         ========================== */
 
         .container {
             min-height: 100vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 30px 15px;
+
             position: relative;
             z-index: 2;
         }
 
+
+        /* =========================
+           CARD
+        ========================== */
+
         .card {
             width: min(900px, 95%);
-            padding: 45px 30px;
+
+            padding: 50px 35px;
+
             text-align: center;
 
             background: rgba(255, 255, 255, 0.14);
+
             border: 1px solid rgba(255, 255, 255, 0.3);
+
             border-radius: 32px;
 
             backdrop-filter: blur(20px);
@@ -88,13 +106,16 @@
                 0 30px 80px rgba(0, 0, 0, 0.3);
         }
 
+
         /* =========================
            RAKHI
         ========================== */
 
         .rakhi {
+
             width: 145px;
             height: 145px;
+
             margin: 0 auto 25px;
 
             border-radius: 50%;
@@ -121,41 +142,60 @@
         }
 
         .rakhi::after {
+
             content: "✦";
+
             font-size: 55px;
+
             color: white;
-            text-shadow: 0 0 20px white;
+
+            text-shadow:
+                0 0 20px white;
         }
 
+
         @keyframes rakhiGlow {
+
             from {
+
                 transform: scale(1);
+
                 box-shadow:
                     0 0 20px #ffd700,
                     0 0 40px rgba(255, 215, 0, 0.5);
             }
 
             to {
+
                 transform: scale(1.08);
+
                 box-shadow:
                     0 0 30px #ffd700,
                     0 0 70px rgba(255, 215, 0, 0.8);
             }
         }
 
+
         /* =========================
            TEXT
         ========================== */
 
         .small-title {
+
             font-size: 17px;
+
             opacity: 0.85;
+
             margin-bottom: 10px;
         }
 
+
         h1 {
+
             font-size: clamp(36px, 7vw, 65px);
+
             line-height: 1.1;
+
             margin-bottom: 20px;
 
             background:
@@ -167,110 +207,53 @@
                 );
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
         }
 
+
         .intro {
+
             font-size: 19px;
+
             opacity: 0.9;
-            margin-bottom: 25px;
+
+            margin-bottom: 30px;
         }
+
 
         /* =========================
-           PHOTO
-        ========================== */
-
-        .photo-section {
-            margin: 25px 0;
-        }
-
-        .photo-wrapper {
-            width: 210px;
-            height: 210px;
-            margin: 0 auto 20px;
-
-            border-radius: 50%;
-            padding: 7px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffd700,
-                    #ff4d6d,
-                    #a18cd1,
-                    #ffd700
-                );
-
-            box-shadow:
-                0 15px 45px rgba(0, 0, 0, 0.35);
-        }
-
-        #sisterPhoto {
-            width: 100%;
-            height: 100%;
-
-            border-radius: 50%;
-            object-fit: cover;
-
-            background: rgba(255,255,255,0.15);
-        }
-
-        /* Upload */
-
-        .upload-label {
-            display: inline-block;
-
-            padding: 12px 22px;
-
-            border-radius: 30px;
-
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.3);
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-        .upload-label:hover {
-            transform: translateY(-3px);
-            background: rgba(255,255,255,0.28);
-        }
-
-        #photoInput {
-            display: none;
-        }
-
-        .photo-hint {
-            font-size: 12px;
-            opacity: 0.65;
-            margin-top: 8px;
-        }
-
-        /* =========================
-           MESSAGE
+           MAIN MESSAGE
         ========================== */
 
         .message {
+
             max-width: 720px;
+
             margin: 30px auto;
 
             font-size: 18px;
+
             line-height: 1.8;
 
             opacity: 0.95;
         }
 
+
         .highlight {
+
             color: #ffe082;
+
             font-weight: bold;
         }
 
+
         /* =========================
-           BUTTON
+           SURPRISE BUTTON
         ========================== */
 
         .surprise-btn {
+
             border: none;
 
             padding: 16px 32px;
@@ -278,9 +261,11 @@
             border-radius: 50px;
 
             background: white;
+
             color: #8e44ad;
 
             font-size: 17px;
+
             font-weight: bold;
 
             cursor: pointer;
@@ -291,19 +276,28 @@
             transition: 0.3s;
         }
 
+
         .surprise-btn:hover {
-            transform: translateY(-5px) scale(1.04);
+
+            transform:
+                translateY(-5px)
+                scale(1.04);
+
             box-shadow:
                 0 15px 40px rgba(0,0,0,0.35);
         }
 
+
         /* =========================
-           SURPRISE
+           SURPRISE SECTION
         ========================== */
 
         .surprise {
+
             max-height: 0;
+
             overflow: hidden;
+
             opacity: 0;
 
             transition:
@@ -312,79 +306,126 @@
                 margin 1s ease;
         }
 
+
         .surprise.show {
+
             max-height: 800px;
+
             opacity: 1;
+
             margin-top: 35px;
         }
 
+
         .surprise-box {
+
             padding: 30px;
 
             border-radius: 25px;
 
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.25);
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid rgba(255,255,255,0.25);
         }
 
+
         .surprise-box h2 {
+
             color: #ffe082;
+
             font-size: 30px;
+
             margin-bottom: 18px;
         }
 
+
         .quote {
+
             font-size: 20px;
+
             line-height: 1.8;
+
             font-style: italic;
         }
 
+
         .signature {
+
             margin-top: 25px;
+
             font-size: 17px;
         }
+
 
         /* =========================
            MEMORY CARDS
         ========================== */
 
         .memories {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 15px;
 
             margin-top: 25px;
         }
 
+
         .memory {
+
             padding: 20px 10px;
 
             border-radius: 20px;
 
-            background: rgba(255,255,255,0.12);
+            background:
+                rgba(255,255,255,0.12);
 
             transition: 0.3s;
         }
 
+
         .memory:hover {
-            transform: translateY(-7px);
-            background: rgba(255,255,255,0.2);
+
+            transform:
+                translateY(-7px);
+
+            background:
+                rgba(255,255,255,0.2);
         }
 
+
         .memory-icon {
+
             font-size: 32px;
         }
 
+
         .memory p {
+
             margin-top: 8px;
+
             font-size: 14px;
         }
 
+
+        /* =========================
+           FOOTER
+        ========================== */
+
         footer {
+
             margin-top: 35px;
+
             font-size: 13px;
+
             opacity: 0.65;
         }
+
 
         /* =========================
            MOBILE
@@ -393,112 +434,131 @@
         @media (max-width: 650px) {
 
             .card {
-                padding: 35px 18px;
+
+                padding:
+                    35px 18px;
             }
 
+
             .rakhi {
+
                 width: 120px;
+
                 height: 120px;
             }
 
+
             .rakhi::after {
+
                 font-size: 42px;
             }
 
-            .photo-wrapper {
-                width: 165px;
-                height: 165px;
-            }
 
             .message {
+
                 font-size: 16px;
             }
 
+
             .quote {
+
                 font-size: 17px;
             }
 
+
             .memories {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
         }
+
     </style>
+
 </head>
 
 
 <body>
 
-    <!-- Floating Hearts -->
 
-    <div class="heart" style="left:5%; animation-duration:7s;">❤️</div>
-    <div class="heart" style="left:18%; animation-duration:9s; animation-delay:2s;">💖</div>
-    <div class="heart" style="left:35%; animation-duration:8s; animation-delay:4s;">💕</div>
-    <div class="heart" style="left:55%; animation-duration:10s; animation-delay:1s;">❤️</div>
-    <div class="heart" style="left:75%; animation-duration:8s; animation-delay:3s;">💗</div>
-    <div class="heart" style="left:90%; animation-duration:9s; animation-delay:5s;">💝</div>
+    <!-- =========================
+         FLOATING HEARTS
+    ========================== -->
 
+    <div class="heart"
+         style="left:5%; animation-duration:7s;">
+        ❤️
+    </div>
+
+    <div class="heart"
+         style="left:18%; animation-duration:9s; animation-delay:2s;">
+        💖
+    </div>
+
+    <div class="heart"
+         style="left:35%; animation-duration:8s; animation-delay:4s;">
+        💕
+    </div>
+
+    <div class="heart"
+         style="left:55%; animation-duration:10s; animation-delay:1s;">
+        ❤️
+    </div>
+
+    <div class="heart"
+         style="left:75%; animation-duration:8s; animation-delay:3s;">
+        💗
+    </div>
+
+    <div class="heart"
+         style="left:90%; animation-duration:9s; animation-delay:5s;">
+        💝
+    </div>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
 
     <main class="container">
 
         <section class="card">
 
-            <!-- Rakhi -->
+
+            <!-- RAKHI -->
 
             <div class="rakhi"></div>
 
+
+            <!-- SMALL TITLE -->
+
             <p class="small-title">
+
                 A little surprise from your brother 💝
+
             </p>
 
 
-            <!-- CHANGE NAME HERE -->
+            <!-- TITLE -->
 
             <h1>
-                Happy Raksha Bandhan,<br>
-                Harshuu ❤️
+
+                Happy Raksha Bandhan,
+                <br>
+
+                Harshu ❤️
+
             </h1>
 
 
+            <!-- INTRO -->
+
             <p class="intro">
-                Because some bonds are simply too special to explain. 🥹
+
+                Because some bonds are simply
+                too special to explain. 🥹
+
             </p>
-
-
-            <!-- =========================
-                 PHOTO SECTION
-            ========================== -->
-
-            <div class="photo-section">
-
-                <div class="photo-wrapper">
-
-                    <img
-                        src="sister.jpg"
-                        alt="My Sister"
-                        class="photo"
-                    >
-
-                </div>
-
-
-                <label
-                    for="photoInput"
-                    class="upload-label"
-                >
-                    📸 Choose Your Photo
-                </label>
-
-                <input
-                    type="file"
-                    id="photoInput"
-                    accept="image/*"
-                >
-
-                <p class="photo-hint">
-                    Choose a photo from your phone or computer
-                </p>
-
-            </div>
 
 
             <!-- =========================
@@ -510,14 +570,18 @@
                 Some relationships are created by destiny,
                 but the bond between a brother and sister
                 is something truly
-                <span class="highlight">special.</span>
+
+                <span class="highlight">
+                    special.
+                </span>
 
                 <br><br>
 
                 You have been my partner in fun,
                 my secret keeper,
                 my occasional headache 😂,
-                and one of the most important people in my life.
+                and one of the most important people
+                in my life.
 
                 <br><br>
 
@@ -528,8 +592,11 @@
                 <br><br>
 
                 But no matter what happens,
+
                 <span class="highlight">
+
                     I'll always have your back. ❤️
+
                 </span>
 
             </div>
@@ -541,34 +608,38 @@
 
             <button
                 class="surprise-btn"
-                onclick="openSurprise()"
-            >
+                onclick="openSurprise()">
+
                 🎁 Open Your Surprise
+
             </button>
 
 
             <!-- =========================
-                 HIDDEN SURPRISE
+                 SURPRISE
             ========================== -->
 
             <div
                 class="surprise"
-                id="surprise"
-            >
+                id="surprise">
+
 
                 <div class="surprise-box">
 
+
                     <h2>
+
                         💌 One Little Promise
+
                     </h2>
+
 
                     <p class="quote">
 
                         "Life may take us to different places,
                         but no distance, no fight, and no time
-                        can ever change the fact that
-                        you will always have a brother
-                        who has your back."
+                        can ever change the fact that you will
+                        always have a brother who has your back."
 
                     </p>
 
@@ -579,12 +650,16 @@
 
                     </p>
 
+
                 </div>
 
 
-                <!-- MEMORY CARDS -->
+                <!-- =========================
+                     MEMORY CARDS
+                ========================== -->
 
                 <div class="memories">
+
 
                     <div class="memory">
 
@@ -593,8 +668,10 @@
                         </div>
 
                         <p>
+
                             Unlimited fights &
                             unlimited laughter
+
                         </p>
 
                     </div>
@@ -607,8 +684,10 @@
                         </div>
 
                         <p>
+
                             Always having
                             each other's back
+
                         </p>
 
                     </div>
@@ -621,16 +700,22 @@
                         </div>
 
                         <p>
+
                             A bond that
                             never fades
+
                         </p>
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
+            <!-- FOOTER -->
 
             <footer>
 
@@ -638,69 +723,25 @@
 
             </footer>
 
+
         </section>
 
     </main>
 
 
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script>
 
-        /* =================================
-           PHOTO UPLOAD
-        ================================= */
-
-        const photoInput =
-            document.getElementById("photoInput");
-
-        const sisterPhoto =
-            document.getElementById("sisterPhoto");
-
-
-        photoInput.addEventListener(
-            "change",
-            function () {
-
-                const file = this.files[0];
-
-                if (!file) {
-                    return;
-                }
-
-                if (!file.type.startsWith("image/")) {
-
-                    alert("Please select an image file.");
-
-                    return;
-                }
-
-
-                const reader =
-                    new FileReader();
-
-
-                reader.onload =
-                    function (event) {
-
-                        sisterPhoto.src =
-                            event.target.result;
-
-                    };
-
-
-                reader.readAsDataURL(file);
-
-            }
-        );
-
-
-        /* =================================
-           SURPRISE
-        ================================= */
 
         function openSurprise() {
 
+
             const surprise =
                 document.getElementById("surprise");
+
 
             const button =
                 document.querySelector(".surprise-btn");
@@ -709,14 +750,20 @@
             surprise.classList.toggle("show");
 
 
-            if (surprise.classList.contains("show")) {
+            if (
+                surprise.classList.contains("show")
+            ) {
+
 
                 button.innerHTML =
                     "💖 Your Surprise Is Opened";
 
+
                 createConfetti();
 
+
             } else {
+
 
                 button.innerHTML =
                     "🎁 Open Your Surprise";
@@ -726,13 +773,16 @@
         }
 
 
-        /* =================================
+
+        /* =========================
            CONFETTI
-        ================================= */
+        ========================== */
 
         function createConfetti() {
 
+
             const symbols = [
+
                 "❤️",
                 "💖",
                 "💕",
@@ -741,10 +791,16 @@
                 "🌸",
                 "💝",
                 "🥰"
+
             ];
 
 
-            for (let i = 0; i < 60; i++) {
+            for (
+                let i = 0;
+                i < 60;
+                i++
+            ) {
+
 
                 const confetti =
                     document.createElement("div");
@@ -762,17 +818,25 @@
                 confetti.style.position =
                     "fixed";
 
+
                 confetti.style.left =
                     Math.random() * 100 + "vw";
+
 
                 confetti.style.top =
                     "-30px";
 
+
                 confetti.style.fontSize =
-                    (15 + Math.random() * 20) + "px";
+                    (
+                        15 +
+                        Math.random() * 20
+                    ) + "px";
+
 
                 confetti.style.zIndex =
                     "9999";
+
 
                 confetti.style.pointerEvents =
                     "none";
@@ -784,38 +848,53 @@
 
 
                 const duration =
-                    2 + Math.random() * 3;
+                    2 +
+                    Math.random() * 3;
 
 
                 confetti.animate(
 
                     [
+
                         {
                             transform:
                                 "translateY(0) rotate(0deg)",
+
                             opacity: 1
                         },
 
+
                         {
+
                             transform:
                                 `translateY(110vh) rotate(${Math.random() * 720}deg)`,
+
                             opacity: 0
                         }
+
                     ],
 
+
                     {
+
                         duration:
                             duration * 1000,
 
                         easing:
                             "ease-out"
+
                     }
+
                 );
 
 
                 setTimeout(
-                    () => confetti.remove(),
+
+                    () =>
+                        confetti.remove(),
+
                     duration * 1000
+
                 );
 
             }
@@ -825,4 +904,5 @@
     </script>
 
 </body>
+
 </html>
